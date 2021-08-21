@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+        table, th , td 
+     {
+                border: 1px solid black;
+     }
+        table
+     {
+        border-collapse: collapse;
+        width: 500px;
+        height: 500px; 
+     }  
+    </style>
+    
+</head>
+<body>
+    <h2>Chess board using HTML tables</h2>
+    <table>
+        <tr>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th> 
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th>
+          </tr>
+          <tr>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th> 
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+            <th bgcolor="black"></th>
+            <th></th>
+        </tr>
+     
+            <tr>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+              </tr>
+          </tr>
+ 
+            <tr>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th> 
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+              </tr>
+         
+
+            <tr>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th> 
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+            </tr>
+         
+            <tr>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+                <th></th>
+                <th bgcolor="black"></th>
+              </tr>
+      </table>
+      <br></br>
+      <br></br>
+      <h2>Chess board using Javascript</h2>
+      
+      <script type="text/javascript">
+
+        // create a chess table 8x8.
+    
+        var count = 0;
+        var row = 1;
+    
+    while (count < 64)
+        {
+    
+        if (count % 2 == 0 && row % 2 != 0)
+    
+          {  document.write('<br/><div style="background-color:#000000;float:left;">&nbsp</div>');
+    
+    
+            }
+
+        else if(count%2!=0 && row%2==0)
+        {
+             document.write('<br/><div style="background-color:#000000;float:left;">&nbsp</div>');
+        }
+    
+        else
+    
+            {
+            document.write('<div style="background-color:#FFFFFF;float:left;">&nbsp</div>');
+            }
+        if (count%8==0)
+        {
+            row++;
+        }
+        /*  
+        */          
+        count++;
+        }
+    </script>
+</body>
+</html>
