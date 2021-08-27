@@ -1,0 +1,31 @@
+<html>
+
+	<head> <title>Radio button and check box</title> </head>
+	
+	<body> 
+		<h1>Welcome to my form</h1>
+		<!--WHY ALL THESE TAGS WORKING WITHOUT FORM TAG HERE?!!!!-->
+		<!--ANS:
+		When we use form tag,all the data collected will be stored together
+		Without form tag, all attributes store data independently-->
+		<p>To design dynamic webpage, one of the tags we use is <b>form</b> tag </p>
+		<!-- <form> ***  </form>   -->
+		Username:<input type = "text" name="" placeholder="Username" maxlength="3" size="20">
+		<br><br>
+		Password:<input type = "password" name="">
+		<br><br>
+		Gender:<input type="radio" name="gen"> Male
+				<input type="radio" name="gen"> Female
+		
+		<br><br>
+		<!--If we dont give same  "name" for radio button it will allow to select both buttons-->
+		
+		Subject:<input type="checkbox" name="sub[]">Web
+				<input type="checkbox" name="sub[]">DS
+		
+		<!--Once we check the box, the info will be stored in the form of array. So the "name" of the check box should be same
+		then only compiler considered it as 1 entity and creats single array-->
+
+	</body>
+
+</html>

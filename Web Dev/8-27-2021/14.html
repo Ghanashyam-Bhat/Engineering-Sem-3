@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+	
+		<title>Class selector</title>
+		
+		<style> 
+			h1{
+				text-align: center;
+				color: brown;
+			}
+			
+			.first{
+				color : green;
+			}
+			
+			.second{
+				text-align:right;
+			}
+			<!--Class selectors start with .  -->
+		</style>
+	</head>
+	
+	<body> 	
+		<h1>Internal CSS</h1>
+		<h1>Styling my space</h1>
+		<!--Automatically style will apply to all H1 tag-->
+		<!--So to prevent this we use SELECTORS:
+		1. Class Selectors
+		2.ID selectors
+		3.Element selectors -->
+		
+		<h2 class="first"><!--Declare a unique name for class-->
+				Class Selectors
+		</h2>
+		
+		<h2>Welcome</h2>
+		
+		<h2 class="first">Same class name here again</h2>
+		
+		<h2 class="first second">  <!--Declare a unique name for ID-->
+				Now I want same color as first h2 tag, but it to align  right
+		</h2>
+		<!--Here we can give same tag 2 different "class". But we can't give 2 ID for single tag -->
+	</body>
+
+</html>

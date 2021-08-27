@@ -1,0 +1,49 @@
+<html>
+
+	<head> <title>Preventing Empty Form</title> </head>
+	
+	<body> 
+		<h1>Welcome to my form</h1>
+		<p>To design dynamic webpage, one of the tags we use is <b>form</b> tag </p>
+		<form>
+			Username:<input type = "text" name="" placeholder="Username" maxlength="3" size="20" required>
+			<br><br>
+			Password:<input type = "password" name="" required>
+			<!--"Required" attribute will make it compuolsory to enter data-->
+			
+			<br><br>
+			Gender:<input type="radio" name="gen"> Male
+					<input type="radio" name="gen"> Female
+			<br><br>
+			Subject:<input type="checkbox" name="sub[]">Web
+					<input type="checkbox" name="sub[]">DS
+			<br><br>
+			<!---------------------------------->
+			Area of interest:<select>
+				<option>--select--</option>
+				<option>Computer Science</option>
+				<option>Drawing</option>
+				<option>Sports</option>
+			</select>
+			
+			<br><br>
+			
+			Upload a file:<input type="file">
+			
+			<br><br>
+			Date:<input type="date" required>
+			<br><br>
+			Color:<input type="color">
+			<br><br>
+			Give a remark:
+			<br>
+			<textarea rows="10" cols="40"></textarea>
+			<br><br>
+			<input type="submit" value="Click Here!">
+			
+			<!--We also have tags for audio,video,location etc-->
+		</form>
+
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+	<head>
+	
+		<title>ID selector</title>
+		
+		<style> 
+			h1{
+				text-align: center;
+				color: brown;
+			}
+			
+			#first{
+				color : blue;
+			}
+			
+			.helo{
+				color:red;
+			}
+			<!--ID selectors start with #  -->
+		</style>
+	</head>
+	
+	<body> 	
+		<h1>Internal CSS</h1>
+		<h1>Styling my space</h1>
+		
+		<h2 id="first">  <!--Declare a unique name for ID-->
+				ID Selectors
+		</h2>
+		
+		<h2>Welcome</h2>
+		<h2 id="first">Same id name here again</h2> <!--Tags with same ID takes same style-->
+		<!--We can't give multiple ID for same tag like classes -->
+		<h2 id="first" class="helo">Class and ID</h2>
+		<!-- We can  give both ID and class for same tag, in that case ID dominates -->
+	</body>
+
+</html>
