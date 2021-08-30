@@ -1,0 +1,65 @@
+<html>
+
+	<head>
+	
+		<title>CSS box</title>
+		<!--Click on Inspect to analyse different components of the webpage-->
+		<!--For Padding We can give all 4 dimentions,only 2 or only 1-->
+		<!--Border takes 2 parameters, pixels and border color-->
+		<style> 
+		
+			body
+			{
+			margin:1px;
+			border:1px solid black;
+			}
+			
+			.box-one
+			{
+				padding: 10px 20px 30px 40px;
+				background-color:orange;
+				border: 5px groove green;
+				margin:7px ;
+			}
+			
+			.box-two
+			{
+			padding: 10px 30px;
+			background-color:red;
+			border: 3px solid blue;
+			margin:7px ;
+			}
+			
+			.borders{
+			border-style:double;
+			border-width:3px;
+			border-radius:3px;
+			border-color:blue;
+			}
+		</style>
+	</head>
+	
+	<body> 	
+		<p class="borders">WELCOME to CSS borders</p>
+		
+		<div class="box-one">one </div>
+		<div class="box-two">two </div>
+	</body>
+
+</html>
+
+<!--
+Type of boders :
+1. Solid
+2. Dotted
+3. Dashed 
+4. double
+5. groove
+6. ridge
+7. inset
+8. outside
+9. none
+10. hidden
+11.dotted dashed solid double
+
+-->

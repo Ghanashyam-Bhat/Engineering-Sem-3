@@ -1,0 +1,70 @@
+body{
+	margin:5px;
+	padding: 5px;
+	font-family:Arial;
+	
+	/*background  :url(i.jpg) ; */ /*Insert backgroung image*/
+	/*background-position:center;*/
+	/*background-repeat:no-repeat;*/
+	/*height:100%;*/
+	/*width:100%;*/
+	background-color:#AF90CD;
+	/*https://www.rapidtables.com/web/color/RGB_Color.html*/
+}
+
+.login
+{
+	width:380 px;
+	padding:80px;
+	margin:auto; /* Margin will be taken automatically based on device*/
+	background-color:rgb(105,8,129);
+	border-radius:20px;
+	max-width:500px;
+}
+
+h2{
+	text-align:center;
+	color:rgb(2,23,49);
+	padding:20px;
+}
+
+label /*To apply same styling for all label tags inside form*/
+{
+	color:cyan;
+	font-size:20px;
+	font-family:sans-serif;
+}
+
+#uname{
+	width: 250px;
+	height:30px;
+	border-radius:3px;
+	border:none;
+	padding-left:8px;
+}
+
+#pass{
+	width: 250px;
+	height:30px;
+	border-radius:3px;
+	border:none;
+	padding-left:10px;
+}
+#label_pass
+{
+padding-right:3px;
+}
+
+#login{
+	margin-left:100px;
+	width:100px;
+	height:25px;
+	border-radius:3px;
+	border:none;
+	color:blue;
+	font-size:15px;
+	font-weight:italic;
+	max-width:200px;
+	background-color:grey;
+	padding:6px;
+}
