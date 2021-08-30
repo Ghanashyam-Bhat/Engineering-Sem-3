@@ -86,15 +86,16 @@ float avg(HEAD* h ,int n)
 void sort(HEAD* h,int n)
 {
 	INFO temp;
+	INFO* pres=h->head;
 	for(int i=0;i<n-1;i++)
 	{
 		for(int j=0;j<n-i-1;j++)
 		{
-			if(strcmp((h->head+j)->SRN,(h->head+j+1)->SRN)>0)
+			if(strcmp(pres->SRN,pres->link->SRN)>0)
 			{
-				temp = *(h->head+j);
-				*(h->head+j) = *(h->head+j+1);
-				*(h->head+j+1) = temp;
+				temp = *(pres->SRN);
+				*(pres->SRN) = *(pres->link->SRN);
+				*(pres->link->SRN) = temp;
 			}
 		}		
 	}
