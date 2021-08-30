@@ -94,9 +94,9 @@ void sort(HEAD* h,int n)
 		{
 			if(strcmp(pres->SRN,pres->link->SRN)>0)
 			{
-				temp = *(pres->SRN);
-				*(pres->SRN) = *(pres->link->SRN);
-				*(pres->link->SRN) = temp;
+				temp = *(pres);
+				*(pres) = *(pres->link);
+				*(pres->link) = temp;
 			}
 			pres=pres->link;
 		}		
