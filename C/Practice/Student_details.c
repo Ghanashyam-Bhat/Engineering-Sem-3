@@ -29,8 +29,8 @@ int main()
 	HEAD h;
 	h.head = NULL;
 	int n= input(&h);
-	float average = avg(&h,n);
-	printf("Average marks of the class for the subject is: %.2f",average);
+	//float average = avg(&h,n);
+	//printf("Average marks of the class for the subject is: %.2f",average);
 	sort(&h,n);
 	//display(&h,n);
 }
@@ -48,13 +48,13 @@ int input(HEAD* h)
 		printf("\n\nEnter student SRN: ");fflush(stdin);scanf("%[^\n]s",temp->SRN);
 		printf("Enter student name: ");fflush(stdin);scanf("%[^\n]s",temp->name);
 		printf("Enter Semester: ");fflush(stdin);scanf("%d",&temp->sem);
-		for(int j=0;j<2;j++)
+		/*for(int j=0;j<2;j++)
 		{
 			printf("Subject: %d\n",j+1);
 			printf("Enter subject name: ");fflush(stdin);scanf("%[^\n]",temp->subjects[j].sub_name);
 			printf("Enter subject code: ");fflush(stdin);scanf("%[^\n]",temp->subjects[j].sub_code);
 			printf("Enter marks: ");fflush(stdin);scanf("%d",&temp->subjects[j].marks);
-		}
+		}*/
 		h->head = temp;
 		temp->link = pres;
 	}
@@ -87,20 +87,22 @@ void sort(HEAD* h,int n)
 {
 	INFO temp;
 	INFO* pres;
-	for(int i=0;i<n-1;i++)
+	/*for(int i=0;i<n-1;i++)
 	{
 		pres=h->head;
 		for(int j=0;j<n-i-1;j++)
 		{
 			if(strcmp(pres->SRN,pres->link->SRN)>0)
 			{
+				
 				temp = *(pres);
 				*(pres) = *(pres->link);
 				*(pres->link) = temp;
 			}
 			pres=pres->link;
-		}		
-	}
+		}
+	}*/
+	
 	display(h,n);
 }
 
