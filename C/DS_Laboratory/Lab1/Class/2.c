@@ -47,7 +47,7 @@ int input(HEAD* h)
 		printf("\n\nEnter student SRN: ");fflush(stdin);scanf("%[^\n]s",temp->SRN);
 		printf("Enter student name: ");fflush(stdin);scanf("%[^\n]s",temp->name);
 		printf("Enter Semester: ");fflush(stdin);scanf("%d",&temp->sem);
-		for(int j=0;j<2;j++)
+		for(int j=0;j<5;j++)
 		{
 			printf("Subject: %d\n",j+1);
 			printf("Enter subject name: ");fflush(stdin);scanf("%[^\n]",temp->subjects[j].sub_name);
