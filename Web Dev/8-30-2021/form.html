@@ -1,0 +1,62 @@
+<html>
+	<head>
+	<style>
+		body{
+			background-color:black;
+		}
+		#div{
+		margin:10px;
+		padding:15px 5px 5px 10px;
+		background-color:lightgray;
+		border-radius : 5px;
+		height:100vh;
+		}
+		.box{
+			width : 900px;
+			height:50px;
+			padding-left:5px;
+		}
+		#text{
+		height:200px;width:400px;
+		text-align:left-side;
+		}
+		.but{
+		cursor:pointer;
+		}
+		input[type=checkbox]{
+		margin:10px;}
+		input[type=submit]{
+		
+		</style>
+	</head>
+
+	<body>
+	<div id="div">
+		<form>
+			First name<br>
+			<input type="text" placeholder="your first name" required class="box"><br><br>
+			Last name<br>
+			<input type="text" placeholder="your last name"  required class="box"><br><br>
+			Ocupation<br>
+			<input type="text" class="box"disabled><br><br>
+			Country<br>
+			<select class="box">
+				<option>australia</option>
+				<option>india</option>
+				<option>cannada</option>
+			</select><br><br>
+			Subject<br>
+			<textarea id="text">
+			Write something...
+			</textarea >
+			<br><br>
+			<input type="radio" name="gen">Male
+			<input type="radio" name="gen" >Female
+			<br>
+			<input type="checkbox">Stay signed in
+			<br>
+			<button class="but">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
