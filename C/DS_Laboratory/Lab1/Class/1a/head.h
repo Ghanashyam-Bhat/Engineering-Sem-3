@@ -1,0 +1,1 @@
+int fun(char* string,char* sub,char* test,int x,int y,int z);
