@@ -48,8 +48,7 @@ int merge(H* h, H* he,int n)
 	NODE* pres2 = he->head;
 	for(int i=0;i<n;i++)
 	{
-		while(pres->poly.power<=pres2->poly.power)
-		{
+			printf("**\n");
 			if(pres2==NULL)
 			{
 				return 0;
@@ -69,13 +68,18 @@ int merge(H* h, H* he,int n)
 			else if(pres->poly.power==pres2->poly.power)
 			{
 				prev = pres2;
-				pres->poly.coeff=pres->poly.coeff+pres2->poly.coeff;
-				prev->link = pres2->link;
-				free(pres2);
-				pres2= prev->link;
+				if(pres->link&&pres->link->poly.power>pres2->poly.power)
+				{
+					pres = pres->link;
+				}
+				if(pres->link&&pres->link->poly.power<pres2->poly.power)
+				{
+					pres->poly.coeff=pres->poly.coeff+pres2->poly.coeff;
+					prev->link = pres2->link;
+					free(pres2);
+					pres2= prev->link;
+				}
 			}
-		}
-		pres = pres->link;
 	}
 	printf("\nReached the Calling of sort function");
 	sort(h,n);
@@ -110,7 +114,7 @@ void sort(H* h,int n)
 		pres=h->head;
 		for(int j=0;j<n-i-1;j++)
 		{
-			if(pres->poly.power,pres->link->poly.power)
+			if(pres->poly.power>pres->link->poly.power)
 			{
 				t = pres->link;
 				t1 = pres->link->link;
