@@ -62,7 +62,7 @@ int main()
 void swap(H* h,int k,int l, int n)
 {
 	NODE* pres1=NULL , *prev1=NULL , *pres2=NULL , *prev2=NULL,*pres = h->head,*prev = NULL,*temp;
-	for(int i=0;i<n && (pres1==NULL || pres2==NULL); i++)
+	for(int i=0;i<n && (pres1==NULL || pres2==NULL) && pres!=NULL; i++)
 	{
 	        if(i==k-1)
 	        {
