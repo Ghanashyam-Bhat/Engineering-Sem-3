@@ -9,7 +9,7 @@ typedef struct node
 
 typedef struct head_node
 {
-        NODE* head;
+	NODE* head;
 }H;
 void swap(H* h,int k,int l, int n);
 void delete(H* h,int n);
@@ -39,21 +39,21 @@ int main()
                 printf("Enter elements to be swapped: ");scanf("%d%d",&k,&l);
                 if(k<=n && l<=n)
                 {
-                        swap(&h,k,l,n);
-                        pres = h.head;
-                        while(pres!=NULL)
-                {
-                        printf("%d\n",(pres->info));
-                        pres = pres->link;
-                }
+					swap(&h,k,l,n);
+					pres = h.head;
+					while(pres!=NULL)
+					{
+						printf("%d\n",(pres->info));
+						pres = pres->link;
+					}
                 }
                 printf("***\n");
                 delete(&h,n);
-                 pres = h.head;
+				pres = h.head;
                 while(pres!=NULL)
                 {
-                        printf("%d\n",(pres->info));
-                        pres = pres->link;
+					printf("%d\n",(pres->info));
+					pres = pres->link;
                 }
         }
 }
