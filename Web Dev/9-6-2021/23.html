@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Trying loops and array and functions</title>
+	</head>
+	
+	<body>
+	
+		<script>
+			var b = [11,22,33,44,55];
+			for (var i =0; i<b.length;i++)
+			{
+				alert(b[i])
+			}
+			
+			for (var i in b) //Here i takes the index of elements only , not value of element
+			{
+				document.write(i +" value " + b[i]+"<br>");
+			}
+			
+			/*
+			var name = new Array(5)
+			alert("length of array:"+ name.length);
+			name[0] = 11;
+			name[1] = 22;
+			name[2] = 33;
+			name[3] = 44;
+			name[5] = 55;
+			*/
+			
+		</script>
+		
+		
+		<script>
+		
+			function fun1()  //Declaring a function
+			{
+				document.write("Hello World! <br>");
+				return "Print Using Function";
+			}
+			
+			function fun2()  //Declaring a function
+			{
+				document.write("Mouse here <br>");
+				return "Print Using Function";
+			}
+		
+			//Calling a function
+			alert(fun1());
+		</script>
+		
+		<!--Calling Functions of JS using HTML -->
+		<input type="submit" value="Click Here" onclick="fun1()">
+		
+		<input type="submit" value="Mouse over"  onmouseover="fun2()">
+		
+		
+		
+		<script>
+			setInterval(   function(){alert("Say Hi");},   3000);
+			//First parameter is function , 2nd parameter is time(in mili second )
+			//This is a callback function to perform any operation after some timen interval
+			
+			setTimeout(   function(){alert("Say Timeout");},   5000);
+		
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>(=== and ==) and (various operations)</title>
+	</head>
+	
+	<body>
+		<p id="id1"></p>
+		
+		<script>
+		//Difference between == and ===
+			var a=200;
+			if(a==200)
+			{
+				document.write("Both are equal");
+			}
+			else
+			{
+				document.write("Both are not equal");
+			}
+		</script>
+		
+		<br> <br>
+		
+		<script>
+			var a=200;
+			if(a=="200")		//This gives true because, JS comapres "200" and 200 when we use ==
+			{
+				document.write("Both are equal <br>"); //<br> tag inside for newline
+			}
+			else
+			{
+				document.write("Both are not equal");
+			}
+		</script>
+		
+		<br><br>
+		
+		<script>
+			var a=200;
+			if(a==="200")		//When we use === it checks value along with datatype
+			{
+				document.write("Both are equal ");
+			}
+			else
+			{
+				document.write("Both are not equal");
+			}
+		</script>
+		
+		
+		<script>
+		//Loops, array , pompt 
+			var c = ["PES" , "UNIVERSITY"];
+			alert(c);
+			
+			prompt("Enter your name")
+			
+			
+			name="PES UNIVERSITY";
+			for(var i=0; i<name.length;i++)
+			{
+				alert(name[i]);
+			}
+			document.write("Length of array is :"+name.length);
+		</script>
+	</body>
+
+</html>
+
+<!-- Difference between !== and != is same as difference between == and === -->
