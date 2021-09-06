@@ -111,7 +111,7 @@ void delete(H* h,int n)
      NODE* pres = h->head,*prev = NULL;
         for(int i=0;i<n && pres;i++)
         {
-                if(i%2==0)
+                if(i%2!=0)
                 {
                         if(prev==NULL)
                         {
