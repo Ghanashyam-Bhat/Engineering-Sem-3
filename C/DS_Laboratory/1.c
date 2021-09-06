@@ -41,12 +41,11 @@ int main()
                 {
                         swap(&h,k,l,n);
                         pres = h.head;
-                        for(int i=0 ;i<n;i++)
-                        {
-                                printf("%d\n",(pres->info));
-                                if(pres)
-                                        pres = pres->link;
-                        }
+                        while(pres!=NULL)
+                {
+                        printf("%d\n",(pres->info));
+                        pres = pres->link;
+                }
                 }
                 printf("***\n");
                 delete(&h,n);
