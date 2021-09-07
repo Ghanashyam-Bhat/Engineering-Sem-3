@@ -1,0 +1,74 @@
+<html>
+
+<head>
+
+	<title>Practice Webpage</title>
+	<style>
+		#main_heading{
+		font-family: "Lucida Handwriting";
+		text-align:center;
+		color:Blue;
+		text-shadow:2px 2px 10px red;
+		font-size: 60px;
+		}
+		
+		#heading_div{
+		border: 5px;
+		border-style:groove;
+		padding:3px;
+		margin:4px;
+		border-bottom:solid blue;
+		background-color:white;
+		opacity:0.6;
+		}
+		
+		#login{
+		margin-left:1000px;
+		border:3px;
+		filter:blur(3px);
+		}
+		
+		body{
+		background-image:url("image.jpg");
+		background-repeat: no-repeat;
+		background-size: 1500px 1200px;
+		}
+		
+		#list{
+		background-color:grey;
+		opacity:0.7;
+		margin-right:900px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="heading_div">
+		<h1 id="main_heading"><b>Bookmarks Collections</b></h1>
+	</div>
+	<br>
+	<div id="login">
+		<label>Username:</label><input type="text" placeholder="username" required><br><br>
+		<label>Password:</label><input type="password" required><br><br>
+		<input type="submit" value="sign in">
+	</div>
+	
+	<div id="list">
+		<h3>Coding practice</h3>
+		<ol>
+			<li>Github <a href="https://github.com/" target="__blank"><img src="GitHub.png" alt="Github logo" height="30px" width="60px"></a></li><br>
+			<li>Codeforces <a href="https://codeforces.com/" target="__blank"><img src="codeforce.png" alt="codeforce logp" height="30px" width="60px"></a></li><br>
+			<li>Freecodecamp <a href="https://www.freecodecamp.org/" target="__blank"><img src="freecodecamp.png" alt="freecodecamp logp" height="30px" width="60px"></a></li><br>
+			<li>Python Tutor <a href="https://pythontutor.com/" target="__blank"><img src="pytutor.png" alt="Pythontutor logp" height="35px" width="50px"></a></li><br>
+		</ol>
+		</div>
+		
+		<div id="list">
+		<h3>Movies and Series</h3>
+		<ol>
+			<li>Anime Download  <a href="https://www.acgnx.se/" target="__blank"><button>Open</button></a></li><br>
+			<li>Netflix Movies  <a href="https://sflix.to/" target="__blank"><button>Open</button></a></li><br>
+		</ol>
+	</div>
+</body>
+</html>
