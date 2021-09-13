@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>getElement-Part3</title>
+
+		<!--Without function  , If we have script tag inside <head> tag, it gives error
+		If we have <script> tag inside body tag after ID declaration, we dont get error.-->
+	</head>
+	
+	<body>
+		<h1>Example for getElementsByName</h1>
+		
+		Username:<input type="text" name="uname" value="Welcome" > <br><br>
+		<input type="submit" onmouseover="display()" onclick="display()">
+		
+		<script>
+			alert(document.getElementsByName("uname")[0].value);//No need of index value for ID, except that everything needs index value
+		</script>
+		
+		
+		<!--
+		getElementsByName
+		getElementsByClass
+		getElementByID        //For ID its Just getElement not getElements
+		-->
+		
+	</body>
+</html>

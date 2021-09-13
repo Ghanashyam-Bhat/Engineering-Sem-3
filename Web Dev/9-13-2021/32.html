@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Inserting Node to list(JS)</title>
+
+	</head>
+	
+	<body>
+		<ul id="moneyheist">
+			<li>Tokyo</li>
+			<li>Rio</li>
+			<li>Nairobi</li>
+		</ul>
+		<input type="submit" value="Insert" onclick="fun1()">
+		
+		<script>
+		function fun1()
+		{
+			var list = document.createElement('li');
+			var text = document.createTextNode('Professor');
+			list.appendChild(text);
+			var l = document.getElementById('moneyheist');
+			l.insertBefore(list,l.childNodes[2]);
+			//Insert Before takes the [2] which is index of element before which we need to append the element
+		}
+		</script>
+	</body>
+</html>

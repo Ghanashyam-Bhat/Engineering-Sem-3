@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>setAttribute()</title>
+		
+	</head>
+	
+	<body>
+		<p><b>setAttribute()</b> Used to set attribute for the element created by DOM</p>
+	</body>
+	
+	<script>
+		var text=document.createElement('textarea');
+		text.setAttribute("rows","10");
+		//First parameter is attribute name and sencond is attribute value
+		text.setAttribute("cols","10");
+		text.setAttribute("placeholder","Enter The text");
+		document.body.appendChild(text);
+	</script>
+</html>

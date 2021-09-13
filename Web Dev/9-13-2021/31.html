@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Query Selector</title>
+
+	</head>
+	
+	<body>
+		<h2 id="id2">Heading 1</h2>
+		<h1>Heading 2</h1>
+		<h2 id="id2">Heading 3</h2>
+		<h1>Heading 4</h1>
+		<h3 class="cl">Heading 2</h3>
+		<h3 class="cl">Heading 2</h3>
+		<script>
+			document.querySelector("h1").style.backgroundColor = 'blue' ;
+			//querySelector applies only to the nearest tag to body tag 
+			
+			document.querySelector("#id2").style.backgroundColor = 'red' ;
+			
+			document.querySelector(".cl").style.backgroundColor = 'green' ;
+		</script>
+	</body>
+</html>

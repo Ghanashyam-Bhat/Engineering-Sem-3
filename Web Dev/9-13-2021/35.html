@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Event Handler</title>
+		
+	</head>
+	
+	<body>
+		<input type="submit" id="id1" value="Click Here"> <!-- onclick="fun1()"--> 
+		<script>
+			//Normal Zindagi : without eventlistner
+			
+			function fun1()
+			{
+				alert("Event is getting excuted");
+				
+			}
+			
+			function fun2()
+			{
+				alert("Double Click");
+				
+			}
+			//Mentos Zindagi: Using Eventlistner
+			
+			//document.getElementById("id1").addEventListener("click",fun1);
+			document.getElementById("id1").addEventListener("dblclick",fun2);//Double Click
+		
+		</script>
+	</body>
+</html>
+
+<!--
+
+EVENT HANDLER
+EventListner functiion : It tells compiler what type of event is executing
+	when single function has both onmouseover and onclick events, using EventListner we can restrict it to any 1 event
+
+Every Browser will have a JS compiler
+chrome : V8
+Edge : Chakra
+
+-->
