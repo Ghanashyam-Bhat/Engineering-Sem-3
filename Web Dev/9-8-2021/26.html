@@ -1,0 +1,30 @@
+<html>
+
+<!--The Webpage we design is called DOM(Document Object Model-->
+	<head>
+	<title> </title>
+	</head>
+
+
+	<body>
+		<h1> HTML tags using JS</h1>
+
+
+		<script>
+			let a = ["IND","ENG","RSA","SL","AUS","UAE","RUS"];
+			let l = a.length;
+			document.write(a+"<br>"+l);
+			
+			//To use HTML tags using JS
+			let list="<ul>";
+			for(let	i=0;i<l;i++)
+			{
+				list +="<li>"+a[i]+"</li>";
+			}
+			list+="</ul>";
+			
+			document.write(list);
+		</script>
+	</body>
+
+</html>
