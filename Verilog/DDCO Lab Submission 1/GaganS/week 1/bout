@@ -1,0 +1,77 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1534a60 .scope module, "tb" "tb" 2 1;
+ .timescale 0 0;
+v0x156c200_0 .net "P", 0 0, L_0x156c730; 1 drivers
+v0x156c2a0_0 .net "Q", 0 0, L_0x156c7d0; 1 drivers
+v0x156c320_0 .net "R", 0 0, L_0x156c830; 1 drivers
+v0x156c3d0_0 .net "S", 0 0, L_0x156c0d0; 1 drivers
+v0x156c4b0_0 .net "T", 0 0, L_0x156cbd0; 1 drivers
+v0x156c560_0 .var "t_a", 0 0;
+v0x156c620_0 .var "t_b", 0 0;
+S_0x156bf40 .scope module, "a1" "invert" 2 6, 3 1, S_0x1534a60;
+ .timescale 0 0;
+v0x156c030_0 .net "i", 0 0, v0x156c560_0; 1 drivers
+v0x156c160_0 .alias "o1", 0 0, v0x156c200_0;
+L_0x156c730 .reduce/nor v0x156c560_0;
+S_0x156bc90 .scope module, "a2" "and2" 2 7, 3 5, S_0x1534a60;
+ .timescale 0 0;
+L_0x156c7d0 .functor AND 1, v0x156c560_0, v0x156c620_0, C4<1>, C4<1>;
+v0x156bd80_0 .alias "i0", 0 0, v0x156c030_0;
+v0x156be20_0 .net "i1", 0 0, v0x156c620_0; 1 drivers
+v0x156bea0_0 .alias "o2", 0 0, v0x156c2a0_0;
+S_0x156b960 .scope module, "a3" "or2" 2 8, 3 9, S_0x1534a60;
+ .timescale 0 0;
+L_0x156c830 .functor OR 1, v0x156c560_0, v0x156c620_0, C4<0>, C4<0>;
+v0x156ba50_0 .alias "i0", 0 0, v0x156c030_0;
+v0x156bb20_0 .alias "i1", 0 0, v0x156be20_0;
+v0x156bbf0_0 .alias "o3", 0 0, v0x156c320_0;
+S_0x156b670 .scope module, "a4" "xor2" 2 9, 3 13, S_0x1534a60;
+ .timescale 0 0;
+L_0x156c0d0 .functor XOR 1, v0x156c560_0, v0x156c620_0, C4<0>, C4<0>;
+v0x156b760_0 .alias "i0", 0 0, v0x156c030_0;
+v0x156b830_0 .alias "i1", 0 0, v0x156be20_0;
+v0x156b8e0_0 .alias "o4", 0 0, v0x156c3d0_0;
+S_0x1534e20 .scope module, "a5" "nand2" 2 10, 3 17, S_0x1534a60;
+ .timescale 0 0;
+L_0x156ca40 .functor AND 1, v0x156c560_0, v0x156c620_0, C4<1>, C4<1>;
+v0x1534860_0 .alias "i0", 0 0, v0x156c030_0;
+v0x156b480_0 .alias "i1", 0 0, v0x156be20_0;
+v0x156b520_0 .alias "o5", 0 0, v0x156c4b0_0;
+v0x156b5c0_0 .net "t", 0 0, L_0x156ca40; 1 drivers
+L_0x156cbd0 .reduce/nor L_0x156ca40;
+    .scope S_0x1534a60;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "dmp1.vcd";
+    %vpi_call 2 12 "$dumpvars", 1'sb0, S_0x1534a60;
+    %end;
+    .thread T_0;
+    .scope S_0x1534a60;
+T_1 ;
+    %vpi_call 2 14 "$monitor", v0x156c560_0, v0x156c620_0, v0x156c200_0, v0x156c2a0_0, v0x156c320_0, v0x156c3d0_0, v0x156c4b0_0;
+    %set/v v0x156c560_0, 0, 1;
+    %set/v v0x156c620_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x156c560_0, 0, 1;
+    %set/v v0x156c620_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x156c560_0, 1, 1;
+    %set/v v0x156c620_0, 0, 1;
+    %delay 10, 0;
+    %set/v v0x156c560_0, 1, 1;
+    %set/v v0x156c620_0, 1, 1;
+    %delay 10, 0;
+    %set/v v0x156c560_0, 0, 1;
+    %set/v v0x156c620_0, 0, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "btestbench.v";
+    "b.v";

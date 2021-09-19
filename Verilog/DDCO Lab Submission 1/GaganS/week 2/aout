@@ -1,0 +1,68 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x21020e0 .scope module, "TB" "TB" 2 1;
+ .timescale 0 0;
+v0x2137f70_0 .var "aa", 0 0;
+v0x2138010_0 .var "bb", 0 0;
+v0x21380c0_0 .var "cc", 0 0;
+v0x2138170_0 .net "cy", 0 0, L_0x2138860; 1 drivers
+v0x2138250_0 .net "ss", 0 0, L_0x21383e0; 1 drivers
+S_0x2101dc0 .scope module, "add1" "fulladd" 2 4, 3 1, S_0x21020e0;
+ .timescale 0 0;
+L_0x2138300 .functor XOR 1, v0x2137f70_0, v0x2138010_0, C4<0>, C4<0>;
+L_0x21383e0 .functor XOR 1, L_0x2138300, v0x21380c0_0, C4<0>, C4<0>;
+L_0x2138530 .functor AND 1, v0x2137f70_0, v0x2138010_0, C4<1>, C4<1>;
+L_0x2138590 .functor AND 1, v0x2137f70_0, v0x21380c0_0, C4<1>, C4<1>;
+L_0x2138680 .functor AND 1, v0x2138010_0, v0x21380c0_0, C4<1>, C4<1>;
+L_0x2138800 .functor OR 1, L_0x2138530, L_0x2138590, C4<0>, C4<0>;
+L_0x2138860 .functor OR 1, L_0x2138680, L_0x2138800, C4<0>, C4<0>;
+v0x2101a40_0 .net "a", 0 0, v0x2137f70_0; 1 drivers
+v0x21378d0_0 .net "b", 0 0, v0x2138010_0; 1 drivers
+v0x2137970_0 .net "cin", 0 0, v0x21380c0_0; 1 drivers
+v0x2137a10_0 .alias "cout", 0 0, v0x2138170_0;
+v0x2137ac0_0 .alias "sum", 0 0, v0x2138250_0;
+v0x2137b60_0 .net "t0", 0 0, L_0x2138300; 1 drivers
+v0x2137c40_0 .net "t1", 0 0, L_0x2138530; 1 drivers
+v0x2137ce0_0 .net "t2", 0 0, L_0x2138590; 1 drivers
+v0x2137dd0_0 .net "t3", 0 0, L_0x2138680; 1 drivers
+v0x2137e70_0 .net "t4", 0 0, L_0x2138800; 1 drivers
+    .scope S_0x21020e0;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "dump.vcd";
+    %vpi_call 2 8 "$dumpvars", 1'sb0, S_0x21020e0;
+    %end;
+    .thread T_0;
+    .scope S_0x21020e0;
+T_1 ;
+    %vpi_call 2 10 "$monitor", v0x2137f70_0, v0x2138010_0, v0x21380c0_0, v0x2138250_0, v0x2138170_0;
+    %set/v v0x2137f70_0, 0, 1;
+    %set/v v0x2138010_0, 0, 1;
+    %set/v v0x21380c0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x2137f70_0, 0, 1;
+    %set/v v0x2138010_0, 1, 1;
+    %set/v v0x21380c0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x2137f70_0, 1, 1;
+    %set/v v0x2138010_0, 0, 1;
+    %set/v v0x21380c0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x2137f70_0, 1, 1;
+    %set/v v0x2138010_0, 1, 1;
+    %set/v v0x21380c0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x2137f70_0, 0, 1;
+    %set/v v0x2138010_0, 0, 1;
+    %set/v v0x21380c0_0, 1, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "c1testBench.v";
+    "fa.v";
