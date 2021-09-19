@@ -1,0 +1,66 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x153a690 .scope module, "TB" "TB" 2 1;
+ .timescale 0 0;
+v0x1581a20_0 .var "A", 0 0;
+v0x1581ac0_0 .var "B", 0 0;
+v0x1581b70_0 .var "S", 0 0;
+v0x1581c20_0 .net "X", 0 0, L_0x1582020; 1 drivers
+S_0x153a780 .scope module, "mux" "MUX2" 2 9, 3 1, S_0x153a690;
+ .timescale 0 0;
+v0x154c5c0_0 .net *"_s0", 1 0, L_0x1581d00; 1 drivers
+v0x1581520_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0x15815c0_0 .net *"_s4", 1 0, C4<00>; 1 drivers
+v0x1581660_0 .net *"_s6", 0 0, L_0x1581eb0; 1 drivers
+v0x1581710_0 .net "a", 0 0, v0x1581a20_0; 1 drivers
+v0x15817b0_0 .net "b", 0 0, v0x1581ac0_0; 1 drivers
+v0x1581890_0 .net "s", 0 0, v0x1581b70_0; 1 drivers
+v0x1581930_0 .alias "y", 0 0, v0x1581c20_0;
+L_0x1581d00 .concat [ 1 1 0 0], v0x1581b70_0, C4<0>;
+L_0x1581eb0 .cmp/eq 2, L_0x1581d00, C4<00>;
+L_0x1582020 .functor MUXZ 1, v0x1581ac0_0, v0x1581a20_0, L_0x1581eb0, C4<>;
+    .scope S_0x153a690;
+T_0 ;
+    %vpi_call 2 6 "$dumpfile", "dump.vcd";
+    %vpi_call 2 7 "$dumpvars", 1'sb0, S_0x153a690;
+    %end;
+    .thread T_0;
+    .scope S_0x153a690;
+T_1 ;
+    %set/v v0x1581b70_0, 0, 1;
+    %set/v v0x1581a20_0, 0, 1;
+    %set/v v0x1581ac0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 0, 1;
+    %set/v v0x1581ac0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 1, 1;
+    %set/v v0x1581ac0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 1, 1;
+    %set/v v0x1581ac0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x1581b70_0, 0, 1;
+    %set/v v0x1581a20_0, 0, 1;
+    %set/v v0x1581ac0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 0, 1;
+    %set/v v0x1581ac0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 1, 1;
+    %set/v v0x1581ac0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1581a20_0, 1, 1;
+    %set/v v0x1581ac0_0, 1, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testBench2to1.v";
+    "mux2.v";

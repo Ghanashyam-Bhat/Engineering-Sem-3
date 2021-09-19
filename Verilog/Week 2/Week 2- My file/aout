@@ -1,0 +1,68 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1b26e90 .scope module, "TB" "TB" 2 1;
+ .timescale 0 0;
+v0x1b5c450_0 .var "aa", 0 0;
+v0x1b5c4f0_0 .var "bb", 0 0;
+v0x1b5c5a0_0 .var "cc", 0 0;
+v0x1b5c650_0 .net "cy", 0 0, L_0x1b5cd90; 1 drivers
+v0x1b5c730_0 .net "ss", 0 0, L_0x1b5c8c0; 1 drivers
+S_0x1b4a030 .scope module, "add1" "fulladd" 2 4, 3 1, S_0x1b26e90;
+ .timescale 0 0;
+L_0x1b5c7e0 .functor XOR 1, v0x1b5c450_0, v0x1b5c4f0_0, C4<0>, C4<0>;
+L_0x1b5c8c0 .functor XOR 1, L_0x1b5c7e0, v0x1b5c5a0_0, C4<0>, C4<0>;
+L_0x1b5ca10 .functor AND 1, v0x1b5c450_0, v0x1b5c4f0_0, C4<1>, C4<1>;
+L_0x1b5ca70 .functor AND 1, v0x1b5c4f0_0, v0x1b5c5a0_0, C4<1>, C4<1>;
+L_0x1b5cb60 .functor OR 1, L_0x1b5ca10, L_0x1b5ca70, C4<0>, C4<0>;
+L_0x1b5cc10 .functor AND 1, v0x1b5c5a0_0, v0x1b5c450_0, C4<1>, C4<1>;
+L_0x1b5cd90 .functor OR 1, L_0x1b5cb60, L_0x1b5cc10, C4<0>, C4<0>;
+v0x1b4a120_0 .net *"_s0", 0 0, L_0x1b5c7e0; 1 drivers
+v0x1b5bdb0_0 .net *"_s10", 0 0, L_0x1b5cc10; 1 drivers
+v0x1b5be50_0 .net *"_s4", 0 0, L_0x1b5ca10; 1 drivers
+v0x1b5bef0_0 .net *"_s6", 0 0, L_0x1b5ca70; 1 drivers
+v0x1b5bfa0_0 .net *"_s8", 0 0, L_0x1b5cb60; 1 drivers
+v0x1b5c040_0 .net "a", 0 0, v0x1b5c450_0; 1 drivers
+v0x1b5c120_0 .net "b", 0 0, v0x1b5c4f0_0; 1 drivers
+v0x1b5c1c0_0 .net "cin", 0 0, v0x1b5c5a0_0; 1 drivers
+v0x1b5c2b0_0 .alias "cout", 0 0, v0x1b5c650_0;
+v0x1b5c350_0 .alias "sum", 0 0, v0x1b5c730_0;
+    .scope S_0x1b26e90;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "dump.vcd";
+    %vpi_call 2 8 "$dumpvars", 1'sb0, S_0x1b26e90;
+    %end;
+    .thread T_0;
+    .scope S_0x1b26e90;
+T_1 ;
+    %vpi_call 2 11 "$monitor", v0x1b5c450_0, v0x1b5c4f0_0, v0x1b5c5a0_0, v0x1b5c730_0, v0x1b5c650_0;
+    %set/v v0x1b5c450_0, 0, 1;
+    %set/v v0x1b5c4f0_0, 0, 1;
+    %set/v v0x1b5c5a0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1b5c450_0, 0, 1;
+    %set/v v0x1b5c4f0_0, 1, 1;
+    %set/v v0x1b5c5a0_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x1b5c450_0, 1, 1;
+    %set/v v0x1b5c4f0_0, 0, 1;
+    %set/v v0x1b5c5a0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1b5c450_0, 1, 1;
+    %set/v v0x1b5c4f0_0, 1, 1;
+    %set/v v0x1b5c5a0_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x1b5c450_0, 0, 1;
+    %set/v v0x1b5c4f0_0, 0, 1;
+    %set/v v0x1b5c5a0_0, 1, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "c1testBench.v";
+    "a.v";
