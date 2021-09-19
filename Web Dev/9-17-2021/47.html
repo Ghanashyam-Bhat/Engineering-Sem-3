@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>HTML5 canvas</title>
+</head>
+<body>
+    <p>Before Canvas</p>
+   <canvas width="120" height="60"></canvas>
+   <p>After Canvas</p>
+   <script>
+       let c = document.querySelector("canvas");
+       //We can create different dimention object
+       let context = c.getContext("2d");
+       context.fillStyle = 'red' ;
+       context.fillRect(10,10,100,50);
+   </script>
+   </body>
+</body>
+</html>
