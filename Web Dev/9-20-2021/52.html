@@ -1,0 +1,52 @@
+<!--
+   1. Jquery is an open source Library(licence is with MIT)
+    This contains built in functons for JavaScript
+
+   2. WIth Jquery you can select HTML element and directly perfirm action(Manly Callback functions)
+
+   3. Syntax
+        $(selectors).action()
+
+        1.  $ -> defines Jequery element
+        2. $() -> defines what ti access from HTML
+
+        Example:
+        1. $("p").hide()    //This is to hide all paragraph tags in HTML
+        2. $("#demo").hide ()  //Using ID name
+        3. $(".demo").hide()  //Using Class Name
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library for JS</title>
+
+    <!--paste link from "JeQuery cdn/uncompressed" to include library using cloud link-->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
+    <!--We can also copy paste the entire JS file in local file and include that local file-->
+
+</head>
+<body>
+    <h1>Jequery is a open  library for JS</h1 >
+    <p id="id1">Good Morning Everyone</p>
+
+    <script>
+        //document.getElementById("id1").style.display = "none"
+        $("#id1").hide();
+    </script>
+</body>
+</html>
+
+<!--
+    1.hide()
+    2.show()
+    3.toggle()
+    4.remove()
+    5.append()
+-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!--
+Java Script does single thread operation(Single Tasking)
+JS can execute only one function at a time even if we click multiple function at same time
+If there is delay in one function until that function executes
+it wont move to next function.
+-->
+
+<html>
+    <head>
+        <title>JS:Single thread</title>
+        <script>
+            function fn1()
+            {
+                alert("Good Morning!");
+                var j =0;
+                for(var i=0;i<1000000000000;i++) //This is to create delay
+                {
+                    j = i;
+                }
+                alert("Loop executed "+j+"number of times");
+            }
+
+            function fn2() //Till fn1 finishes, fn2 doesn't start
+            {
+                alert("Good Morning again!!");
+            }
+        </script>
+    </head>
+    <body>
+        <input type="submit" onclick="fn1()" value="Click 1">
+        <input type="submit" onclick="fn2()" value="Click 2">
+    </body>
+</html>

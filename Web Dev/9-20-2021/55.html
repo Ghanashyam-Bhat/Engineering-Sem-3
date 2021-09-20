@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fading/Fadeout</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+   <h1>JQuery Fade in fucntion</h1>
+   <p style="display: none;">This tag will be displayed as FadeIn() using Jquery</p>
+   <button id="id1">FadeIn</button>
+   <button id="id2">FadeOut</button>
+   <script>
+       $(document).ready(function(){
+
+            $("#id1").click(function(){
+                // $("p").fadeIn();
+                $("p").fadeIn("slow");
+                //$("p").fadeIn(5000); //Giving time in mili-second
+            });
+
+            $("#id2").click(function(){
+                // $("p").fadeOut();
+                $("p").fadeOut("slow");
+                //$("p").fadeOut(3000); //Giving time in mili-second
+            });
+       });
+   </script>
+</body>
+</html>

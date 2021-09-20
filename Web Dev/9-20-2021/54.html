@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click to Hide/show</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <p>We are going to hide and show the content of paragraph tag</p>
+    <button id="id1">Hide</button>
+    <button id="id2">Show</button>
+    <button id="id3">Toggle</button>
+    <button id="id4">Remove</button>
+    <button id="id5" onclick="fun()">Append</button>
+
+    <script>
+        $(document).ready(function()  //This is like Lambda function
+        {
+            $("#id1").click(function()
+            {
+                $("p").hide();
+            });
+
+            $("#id2").click(function()
+            {
+                $("p").show();
+            });
+
+            $("#id3").click(function()
+            {
+                $("p").toggle();
+            });
+
+            $("#id4").click(function()
+            {
+                $("p").remove();
+            });
+
+            $("#id5").click(function()
+            {
+                $("p").append("Apended the element");
+            });
+        })
+    </script>
+
+    <script>
+        function fun()
+        {
+            var para = document.createElement('p');
+            document.body.appendChild(para);
+        }
+    </script>
+</body>
+</html>
