@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>p:first & p:last</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        p{
+            color: red;
+        }
+        b{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Hello</b>Class</p>
+    <p></p>
+    <script>
+        var str= $("p:first").text();  //To select first paragraph
+        alert(str);
+        $("p:last").html(str); //.html is to append str
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery Attribute</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        $("document").ready(function(){
+            $("button").click(function(){
+                $("img").attr("src","desert.jpg");
+                $("img").attr("alt","desert not dessert");
+                $("img").attr("height","100px");
+                $("img").attr("width","250px");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Fav Desserts</h1>
+    
+    <button>Add Image</button>
+    <br><br>
+    <img>
+</body>
+</html>

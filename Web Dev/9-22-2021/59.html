@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Functions</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button type="text">Abbiocco</button>
+    <button type="text">VIdyarthi Bhavan</button>
+    <button type="text">Bidadi Tatte Idly</button>
+    <p><strong>Note:</strong>Click the button and the vlaue of the button is displayed on thr input  textbox</p>
+    <input type="text">
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var text = $(this).text();
+                $('input[type="text"]').val(text);
+            })
+        })
+        
+    </script>
+</body>
+</html>
