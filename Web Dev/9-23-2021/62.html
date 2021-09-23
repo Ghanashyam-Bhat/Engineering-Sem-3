@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eq function</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
+</head>
+
+<!--
+    Filtering:
+        eq() , filter() , first(),last(),not()
+
+    Keyboard Events:
+    keypress(), keydown() , keyup()
+
+    animate({param},speed,callback)
+-->
+
+<body>
+    <h1>PESU Event</h1>
+    <p>Monday was Fashion Event</p>
+    <p class="class1">Yesterday was Ninada</p>
+    <p>Today Ninada again</p>
+    <p>Tomorrow Ishani Missing</p>
+    
+    <script>  //Here we are selecting with tag name. We can also select using index value
+        $("p").first().css("color","yellow");
+        $("p").last().css("color","red")
+    </script>
+
+    <script> //To select using index 
+        $("p").eq(2).css("color","brown"); //To select using index
+
+        $("p").filter(".class1").css("color","green"); //To select a class 
+
+        $("p").not(".class1").css("text-align","center");  //Not will apply for all except that class
+    </script>
+</body>
+</html>

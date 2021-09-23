@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+   <img src="rcb.jpg"  width="100px" height="123px">
+   <button>Click</button>
+
+   <script>
+       $(document).ready(function(){
+           $("button").click(function(){
+                $("img").css("width","200").css("height","300").slideUp(2000).slideDown(2000)
+           })
+       })
+   </script>
+</body>
+</html>

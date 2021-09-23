@@ -1,0 +1,10 @@
+open xml viewer online
+
+
+NOTES:
+    1. xml - used to transfer file b/w client <------>Server
+    2. xml is used for documentation
+
+    Rules to follow
+    1. 1 root tag is required 
+    2. every tag should have begin and end

@@ -1,0 +1,29 @@
+<!--
+Questions:
+1.for the paragraph within the div id "contents", set color to red
+2.on moving the mouse over any  table cell, the text font size should be increased by 2 times
+3. When the first image on the page is clicked, it fades out in 3 sec and then fades in 3sec
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="contents">
+        <p>Hello Ishani</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#contents").css("color","green")
+        })
+    </script>
+</body>
+</html>
