@@ -1,0 +1,24 @@
+{
+	"library": {
+		"book": [
+			{
+				"name": "Harry Potter",
+				"author": "J K Rowling",
+				"price": "400 INR",
+				"edition": "5"
+			},
+			{
+				"name": "Black Beauty",
+				"author": "Anna Sawell",
+				"price": "150 INR",
+				"edition": "3"
+			},
+			{
+				"name": "The mysterious Island",
+				"author": "Jules Verne",
+				"price": "200 INR",
+				"edition": "3"
+			}
+		]
+	}
+}

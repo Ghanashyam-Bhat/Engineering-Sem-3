@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XHR</title>
+</head>
+<body>
+    <h1>XmlHttpRequest()</h1>
+    <h2>Reading a txt file into html</h2>
+    <p id="id1"></p>
+    <button onclick="loadtext()">Load The File</button>
+
+    <script>
+        function loadtext()
+        {
+            var xhr = new XMLHttpRequest() ;
+            xhr.open("GET","72.txt",true);
+            xhr.send();
+            xhr.onreadystatechange = function(){
+                if(this.readyState==4 && this.status ==200) //200 means success // 4 means ready
+                {
+                    document.getElementById("id1").innerHTML = this.responseText ;
+                }
+            }
+        }
+    </script>
+
+
+    <p id="id2"></p>
+    <button onclick="loadxml()">Load XML</button> 
+
+    <script>
+        function loadxml()
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","72.xml",true);
+            xhr.onreadystatechange = show;
+            xhr.responseText = "text" ;
+            xhr.send() ;
+        }
+        function show()
+        {
+            if(this.readyState == 4 && this.status == 200)
+            {
+                document.getElementById("id2").innerHTML = this.responseText ;
+            }
+        }
+    </script>
+
+
+    <p id="id3"></p>
+    <button onclick="loadjson()">Load json</button> 
+
+    <script>
+        function loadjson()
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","72.json",true);
+            xhr.onreadystatechange = show;
+            xhr.responseText = "text" ;
+            xhr.send() ;
+        }
+        function show()
+        {
+            if(this.readyState == 4 && this.status == 200)
+            {
+                document.getElementById("id3").innerHTML = this.responseText ;
+            }
+        }
+    </script>
+</body>
+</html>

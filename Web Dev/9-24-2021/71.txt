@@ -1,0 +1,4 @@
+To read Json file using Java script
+XmlHttpRequest()    --> xhr() 
+
+onreadystatechange() --> to see if it is ready

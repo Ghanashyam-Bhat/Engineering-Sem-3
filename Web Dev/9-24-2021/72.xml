@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <name>Harry Potter</name>
+        <author>J K Rowling</author>
+        <price>400 INR</price>
+        <edition>5</edition>
+    </book>
+
+    <book>
+        <name>Black Beauty</name>
+        <author>Anna Sawell</author>
+        <price>150 INR</price>
+        <edition>3</edition>
+    </book>
+
+    <book>
+        <name>The mysterious Island</name>
+        <author>Jules Verne</author>
+        <price>200 INR</price>
+        <edition>3</edition>
+    </book>
+
+</library>
