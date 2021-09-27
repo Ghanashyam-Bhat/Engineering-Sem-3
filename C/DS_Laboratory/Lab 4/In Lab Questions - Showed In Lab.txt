@@ -1,0 +1,5 @@
+Infix to postfix
+and
+stack from 2 sides
+
+Both Showed in Lab
