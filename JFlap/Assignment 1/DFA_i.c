@@ -72,7 +72,7 @@ int q4(char *arr)
 	if (strlen(arr)==0)
 		return 1;
 	else if(arr[0] == 'b')
-		return q1(arr+1);
+		return q3(arr+1);
 	else if(arr[0] == 'a')
 		return qo(arr+1);
 	else
