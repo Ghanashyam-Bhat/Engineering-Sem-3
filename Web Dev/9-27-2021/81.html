@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Object</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width="400" height="300"></canvas>
+    <script>
+        var c = document.querySelector("#mycanvas");
+        var context = c.getContext("2d");
+        var grd = context.createLinearGradient(0,0,320,300);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(0.5,"white");
+        grd.addColorStop(1,"blue");
+        context.fillStyle = grd;
+        context.fillRect(0,0,400,300);
+
+    </script>
+</body>
+</html>
+
+<!--
+    For canvas we need to go for javascript inorder to fill color
+    for svg we can do it directly
+
+    in canvas image will be created
+-->

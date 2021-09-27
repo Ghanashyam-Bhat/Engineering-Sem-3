@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make me disappear</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+  <div id="id1" style="background-color: cadetblue;border:2px solid black;padding: 3px;">Click me I will die</div>
+  <div id="id2" style="background-color: cadetblue;border:2px solid black;padding: 3px;">Click me I will die</div>
+  <div id="id3" style="background-color: cadetblue;border:2px solid black;padding: 3px;">Click me I will die</div>
+
+   <script>
+       $(document).ready(function(){
+           $("div").click(function(){
+                $(this).slideUp(200)
+           })
+       })
+   </script>
+</body>
+</html>

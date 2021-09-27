@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+
+    <style>
+        div{
+            background-color: darkseagreen;
+            border: 3px solid black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button id="go">Start Animate</button><br>
+    <div id="block">Ghanashyam Bhat</div>
+    <script>
+        $("#go").click(function(){
+            $("#block").animate({
+                width:"70%",
+                opacity:"0.4",
+                marginLeft:"0.6in",
+                fontSize:"3em",  //3 times the original size
+                borderWidth:"10px"
+            },5000)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <select>
+        <option>Karnataka</option>
+        <option>Goa</option>
+        <option>Punjab</option>
+    </select>
+    <script>
+        $(document).ready(function(){
+            $("select").change(function(){
+              var i= $(this).val();
+               alert(i);
+            })
+        })
+    </script>
+</body>
+</html>
