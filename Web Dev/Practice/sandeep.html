@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <button id="head">click To add Header and Paragraph</button>
+    <button id="hid">click To remove header and paragraph</button>
+    <button id="fad">click To fade the Header and aragraph</button>
+    <script>
+        $(document).ready(function(){
+            $("#head").click(function(){
+                $("#head").before("<header>Header</header>");
+                $("#head").after("<p>Paragraph</p>");
+                $("header").css({"margin":"black","background-color":"red","height":"60px","width":"300px"});
+                $("p").css({"color":"blue"});
+            })
+        })
+
+        $(document).ready(function(){
+            $("#hid").click(function(){
+                $("header").hide();
+                $("p").hide();
+            })
+        })
+
+        $(document).ready(function(){
+            $("#fad").click(function(){
+                $("header").fadeOut(3000).fadeIn(3000);
+                $("p").fadeOut(3000).fadeIn(3000);
+            })
+        })
+
+    </script>
+    <br><br><br><br>
+     <video src="video.mp4" controls width="800px" height="500px" >
+</body>
+</html>

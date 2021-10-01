@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+</head>
+<body>
+    ID:<input type="text" id="txt">
+    <input id="div" type="submit" value="Div tag" onclick="cr_div()"><br><br>
+
+    Info:<input id="info" type="text" >
+    <input type="submit" value="Insert Info" onclick="insert_info()">
+
+    <br><br>Color:<input id="clr" type="text">
+    <input type="submit" value="Style" onclick="color_fn()">
+
+    <script>  
+        function cr_div() 
+        {
+            var txt = document.getElementById("txt");
+            let n = document.createElement('div');
+            n.innerHTML = "<p>Hello</p>";
+            n.id = txt.value;
+            document.body.appendChild(n);
+        }
+        function color_fn()
+        {
+            var txt = document.getElementById("txt");
+            var clr = document.getElementById("clr");
+            let colord =document.getElementById(txt.value);   
+            colord.style.background = clr.value;
+        }
+        function insert_info()
+        {
+            var txt = document.getElementById("txt");
+            var info = document.getElementById("info");
+            let i = document.getElementById(txt.value); 
+            var c = document.createTextNode(info.value);
+            i.appendChild(c);
+        }
+    </script>
+</body>
+</html>
