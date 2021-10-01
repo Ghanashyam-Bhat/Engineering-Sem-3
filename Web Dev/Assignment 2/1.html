@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+    <style>
+        #emoji{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET">
+        <table>
+            <tr>
+                <td> <p>First,Last Name*:</p></td>
+                <td><input type="text" id="first" required> <input type="text" id="last" required></td>
+            </tr>
+            <tr>
+                <td> <p>Organisation:</p></td>
+                <td><input type="text" id="org"></td>
+            </tr>
+            <tr>
+                <td> <p>Email Address*:</p></td>
+                <td><input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td> <p>Work Phone:</p></td>
+                <td><input type="text" id="wkph" maxlength="10" minlength="10"></td>
+            </tr>
+            <tr>
+                <td> <p>Home Phone:</p></td>
+                <td><input type="text" id="hmph" maxlength="10" minlength="10"></td>
+            </tr>
+            <tr>
+                <td> <p>Cell Phone:</p></td>
+                <td><input type="text" id="clph" maxlength="10" minlength="10"></td>
+            </tr>
+            <tr>
+                <td> <p>Fax:</p></td>
+                <td><input type="text" id="fax" maxlength="10" minlength="10"></td>
+            </tr>
+            <tr>
+                <td> <p>Address 1*:</p></td>
+                <td><textarea id="ad1" required></textarea></td>
+            </tr>
+            <tr>
+                <td> <p>Address 2:</p></td>
+                <td><textarea id="ad2"></textarea></td>
+            </tr>
+            <tr>
+                <td> <p>City*:</p></td>
+                <td><input type="text" id="city" required></td>
+            </tr>
+            <tr>
+                <td> <p>State/Province:</p></td>
+                <td><input type="text" id="state"></td>
+            </tr>
+            <tr>
+                <td> <p>Zip/Postal Code:</p></td>
+                <td><input type="text" id="zip" maxlength="6" minlength="6"></td>
+            </tr>
+            <tr>
+                <td> <p>Country*:</p></td>
+                <td><input type="text" id="country" required></td>
+            </tr>
+
+            <tr>
+                <td> <p>* -required fields</p></td>
+                <td><button id="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <p id="emoji">&#128532</p><br>
+    <script>
+        $(document).ready(function(){
+            $("#emoji").hide();
+        })
+    </script>
+    <script>
+        document.getElementById("submit").addEventListener("click",check);
+
+function check()
+{
+    var f_name = document.getElementById("first").value.length;
+    var l_name = document.getElementById("last").value.length;
+    var email = document.getElementById("email").value.length;
+    var ad1 = document.getElementById("ad1").value.length;
+    var city = document.getElementById("city").value.length;
+    var country = document.getElementById("country").value.length;
+    var wkph = document.getElementById("wkph").value.length;
+    var hmph = document.getElementById("hmph").value.length;
+    var clph = document.getElementById("clph").value.length;
+    var disp = "The following mandetory fields are not filled properly:\n";
+    var c=0;
+    if(f_name==0 ||l_name==0)
+    {
+        disp+="Name\n";
+        c++;
+    }
+    if(email==0)
+    {
+        disp+="Email\n";
+        c++;
+    }
+    if((wkph!=0 && wkph!=10) || (hmph!=0 && hmph!=10) || (clph!=0 && clph!=10) )
+    {
+        disp+="Phone Number\n";
+        c++;
+    }
+    if(ad1==0)
+    {
+        disp+="Address 1\n";
+        c++;
+    }
+    if(city==0)
+    {
+        disp+="City\n";
+        c++;
+    }
+    if(country==0)
+    {
+        disp+="Country\n";
+        c++;
+    }
+    if(c!==0)
+    {
+        alert(disp);
+        $(document).ready(function(){
+            $("#emoji").show();
+        })
+    }
+}
+    </script>
+    
+</body>
+</html>

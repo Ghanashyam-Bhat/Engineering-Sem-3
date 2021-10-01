@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>$.ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url:"info.txt",success:function(result){
+                    $("div").html(result);
+                }})
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="id1"><h1>Welcome to AJAX</h1></div>
+    <button>Get the Content</button>
+</body>
+</html>

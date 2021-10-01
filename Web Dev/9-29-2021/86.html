@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>$.getJSON</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+              $.get("info.json",function(result){
+                  $.each(result,function(i,field){
+                        $("div").append(field+"<br> ");
+                  })
+            })
+        })
+    })
+    </script>
+</head>
+<body>
+    <div></div>
+    <button>Load Json</button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+    </script>
+    <style>
+        #header1{
+            border:3px solid black;
+            border-radius: 3px;
+            color: white;
+            background-color: red;
+            height: 100px;
+            width: 150px;
+            margin:50px;
+            padding-top: 80px;
+            text-align: center;
+            text-emphasis: bold;
+            font-size: x-large;
+        }
+        #p1{
+            color:blue;
+            font-size: xx-large;
+            text-emphasis: bold;
+        }
+    </style>
+</head>
+<body>
+    <header id="header1">Header Tag</header>
+    <p id="p1">Paragraph Tag</p>
+
+    <button id="rem">Click To remove CSS</button>
+    <button id="fad">Click To fade the Header and aragraph</button>
+    
+    <script>
+         $(document).ready(function(){
+            $("#rem").click(function(){
+                $("header").removeAttr("id");
+                $("p").removeAttr("id");
+            })
+        })
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#fad").click(function(){
+                $("header").fadeOut(3000).fadeIn(3000);
+                $("p").fadeOut(3000).fadeIn(3000);
+            })
+        })
+    </script>
+</body>
+</html>
