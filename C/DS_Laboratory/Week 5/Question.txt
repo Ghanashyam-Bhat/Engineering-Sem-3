@@ -1,0 +1,1 @@
+Implement a program to maintain a doctor’s appointment list using a queue. The appointment list should have details like the Patient’s Name, Date, and Time of appointment. The request should be served based on appointment slots. If no appointment is available, display a suitable message appropriately. The appointment will be issued on daily basis.
