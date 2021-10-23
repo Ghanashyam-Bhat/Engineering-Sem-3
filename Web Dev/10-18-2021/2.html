@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>props</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <!--Babal JS converts out text into redable format-->
+    <div id="container"></div>
+    <script type="text/babel">
+    class Myreact extends React.Component
+    {
+        //needs to be enclosed in parenthesis or base tag like h1
+        //props is used to add attribute or style to tag in react JS
+        //if u want display properties for any tag use the props
+        render(){
+            return(
+            <div>
+                <h1>Hello,{this.props.name}</h1>
+                {this.props.children}
+            </div>);
+        }
+    }
+    ReactDOM.render(
+        <div><Myreact name="Iron Man"/><Myreact name="Batman"/></div>,document.getElementById("container")
+        )
+        //If we call render twice, only last one gets executed
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Photo using React JS</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        class Reassign extends React.Component 
+        {
+            render()
+            {
+                return(
+                    <div>
+                        <img src={this.props.src} />
+                    </div>
+                );
+            }
+        }
+        class Reslink extends React.Component
+        {
+            render()
+            {
+                return(
+                    <div>
+                        <a href={this.props.link}> {this.props.linktext} </a>
+                    </div>
+                );
+            }
+        }
+
+        class Rescaption extends React.Component 
+        {
+            render()
+            {
+                return(
+                    <div>
+                        <p>{this.props.caption}</p>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <div>
+                <Reassign src="img.bmp" />
+                <Reslink link="https://wireframe.cc/" linktext="wireframe"/>
+                <Rescaption caption="Ghanashyam Photography" />
+                </div>,document.getElementById("container")
+        );
+    </script>
+</body>
+</html>

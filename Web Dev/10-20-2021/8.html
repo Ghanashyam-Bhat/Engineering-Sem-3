@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>State</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Image extends React.Component
+        {
+            render()
+            {
+                return(
+                    <img src={this.props.src} width="200px" height="200px"/>
+                );
+            }
+        }
+
+        class Index extends React.Component{
+            constructor(){//We need to use constructor for State
+                super();//Super method
+                this.state = {count:0} //Initializing count and setting its value to 0
+            }
+            btnClick(){
+                this.setState({count:this.state.count+1})
+            }
+            render()
+            {
+                return(
+                    <div>
+                        <h1>Likes {this.state.count}</h1>
+                        <button onClick={this.btnClick.bind(this)}><img src="yes.png" width="20px" height="20px"/></button>
+                    </div>//We have to use bind function for all function call
+                );
+            }
+        }
+        
+        ReactDOM.render(
+            <div>
+            <Image src="8.jpg"/>
+            <Index />
+            </div>
+            ,document.getElementById("root")
+        );
+    </script>
+</body>
+</html>

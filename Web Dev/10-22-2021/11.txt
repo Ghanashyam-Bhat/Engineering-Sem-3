@@ -1,0 +1,4 @@
+refs(references) and keys:
+Reference are funxtions provided by react to access the DOM 
+and the react element that you have created.
+They are used in cases where we want to change the value of the child component without using "props"

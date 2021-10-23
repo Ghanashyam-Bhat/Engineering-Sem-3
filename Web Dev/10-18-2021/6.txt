@@ -1,0 +1,26 @@
+properties(props) and state
+props used to add attributes or style to tag in ReactJS
+syntax 
+    {this.props.name}
+
+    {this.state}
+
+props are read only (cannot be modified/immutable)
+State is mutable. State changes can be asynchronous. State can be modified using "this.setState"
+
+
+Lifecycle of component(html tags) in ReactJS 
+1. componentWillMount()
+    --Exe Immediatly before initialize of render
+2. componentDidMount()
+    --Exe Immediatly after initialize of render
+3. componentWillReceiveProps()
+    --When component receives new props 
+4. shouldComponentUpdate()
+    --Before rendering , after receiving new props
+5. componentWillUpdate()
+    --Before rendering,after receiving new props 
+6. componentDidUpdate()
+    --after component update are flushed to DOM 
+7. componentWillUnmount()
+    --Immediatly before removing component from DOM

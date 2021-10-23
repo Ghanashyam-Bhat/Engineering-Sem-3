@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Photo using React JS</title>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+    <script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="leaf"></div>
+    <script type="text/babel"> 
+        class Image extends React.Component{
+            render(){
+                return(
+                    <img src={this.props.source} width="200px" height="200px"/>
+                );
+            } 
+        }
+        class Caption extends React.Component{
+            render(){
+                return(
+                    <p>{this.props.name}</p>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <Image source="8.jpg"/>,document.getElementById("root")
+        );
+
+        ReactDOM.render(
+            <Caption name="GB"/>,document.getElementById("leaf")
+        );
+    </script>
+</body>
+</html>
