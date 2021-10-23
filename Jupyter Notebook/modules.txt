@@ -1,0 +1,13 @@
+Installed Libraries
+scapy
+beautifulsoup
+numpy
+matplolib
+statistics
+
+
+Running Jupyter Lab
+jupyter-lab
+
+Running Jupyter Notebook
+jupyter notebook
